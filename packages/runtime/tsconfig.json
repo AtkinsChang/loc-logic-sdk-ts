@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base",
+  "compilerOptions": {
+    "rootDir": "src",
+
+    "emitDeclarationOnly": true,
+    "outDir": "dts"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["target"],
+  // override config for ts-node
+  "ts-node": {
+    "compilerOptions": {
+      "rootDir": ".",
+      "module": "commonjs",
+      "emitDeclarationOnly": false
+    }
+  }
+}

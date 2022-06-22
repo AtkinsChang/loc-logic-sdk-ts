@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base",
+  "compilerOptions": {
+    "rootDir": "src",
+
+    "declaration": false,
+    "declarationMap": false,
+    "outDir": "dts"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["target"]
+}

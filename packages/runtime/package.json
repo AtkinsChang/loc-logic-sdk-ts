@@ -1,0 +1,23 @@
+{
+  "name": "@saffron/runtime",
+  "version": "1.0.0",
+  "repository": "https://github.com/fstnetwork/saffron",
+  "author": "FST Network <dev@fstk.io>",
+  "private": true,
+  "types": "target/index.d.ts",
+  "scripts": {
+    "build": "ts-node build.ts && rollup -c && rimraf target/dts",
+    "clean": "rimraf target"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@types/node": "^16.7.1",
+    "json-schema-to-typescript": "^10.1.4",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.56.3",
+    "rollup-plugin-dts": "^3.0.2",
+    "ts-node": "^10.2.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.3.5"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    // Type Checking
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    // "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    // Modules
+    // "baseUrl": "./src",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    // Emit
+    "declaration": true,
+    "declarationMap": true,
+    "importsNotUsedAsValues": "remove",
+    "inlineSourceMap": true,
+    "newLine": "lf",
+    "noEmitOnError": true,
+    "removeComments": true,
+    // Interop Constraints
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    // Language and Environment
+    "lib": ["esnext"],
+    "target": "esnext",
+    "useDefineForClassFields": true,
+
+    // BUG: i don't know why but node type is broken
+    "skipLibCheck": true
+  }
+}

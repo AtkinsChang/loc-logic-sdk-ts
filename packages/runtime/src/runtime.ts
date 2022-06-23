@@ -80,5 +80,7 @@ export class Runtime<C> {
 
 declare global {
   export var run: undefined | (<C>(ctx: C) => Promise<void>);
-  export var handleError: undefined | (<C>(ctx: C, error: RailwayError) => Promise<void>);
+  export var handleError:
+    | undefined
+    | (<C>(ctx: C, error: RailwayError) => Promise<void>);
 }

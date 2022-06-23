@@ -1,5 +1,14 @@
-import { AggregatorContext, GenericContext, RailwayError } from "@saffron/runtime";
-export { EventPayload, MessageQueuePayload, HttpPayload, Database } from "@saffron/runtime";
+import {
+  AggregatorContext,
+  GenericContext,
+  RailwayError,
+} from "@saffron/runtime";
+export {
+  EventPayload,
+  MessageQueuePayload,
+  HttpPayload,
+  Database,
+} from "@saffron/runtime";
 
 export abstract class AbstractLogic {
   abstract run(): Promise<void>;

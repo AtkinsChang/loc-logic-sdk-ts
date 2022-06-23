@@ -11,8 +11,13 @@ export class LocalStorageAgent {
     });
   }
 
-  async putByteArray(key: string, value: Uint8Array | string, timeout?: number): Promise<void> {
-    const byteArray: Uint8Array = typeof value === "string" ? Deno.core.encode(value) : value;
+  async putByteArray(
+    key: string,
+    value: Uint8Array | string,
+    timeout?: number
+  ): Promise<void> {
+    const byteArray: Uint8Array =
+      typeof value === "string" ? Deno.core.encode(value) : value;
 
     await Deno.core.opAsync("op_local_storage_agent_put", {
       key,

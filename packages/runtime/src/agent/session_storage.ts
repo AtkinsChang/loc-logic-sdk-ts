@@ -17,8 +17,12 @@ export class SessionStorageAgent {
     });
   }
 
-  async putByteArray(key: string, value: Uint8Array | string): Promise<boolean> {
-    const byteArray: Uint8Array = typeof value === "string" ? Deno.core.encode(value) : value;
+  async putByteArray(
+    key: string,
+    value: Uint8Array | string
+  ): Promise<boolean> {
+    const byteArray: Uint8Array =
+      typeof value === "string" ? Deno.core.encode(value) : value;
 
     return Deno.core.opAsync("op_session_storage_agent_put", {
       key,

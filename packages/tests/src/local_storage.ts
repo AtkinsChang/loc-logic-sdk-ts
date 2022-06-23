@@ -13,23 +13,34 @@ export class TestLocalStorage extends GenericLogic {
     await this.context.agents.localStorage?.putByteArray("fst", arr);
 
     // test putByteArray by Uint8Array
-    await this.context.agents.localStorage?.putByteArray("kawa", new Uint8Array([121, 111]));
+    await this.context.agents.localStorage?.putByteArray(
+      "kawa",
+      new Uint8Array([121, 111])
+    );
 
     // test putByteArray by string
-    await this.context.agents.localStorage?.putByteArray("byteArrayByString", "fromStr");
+    await this.context.agents.localStorage?.putByteArray(
+      "byteArrayByString",
+      "fromStr"
+    );
 
     await this.context.agents.localStorage?.putJson("foo", 1 as Number);
     let bar = (await this.context.agents.localStorage?.get("foo")) + 3;
     await this.context.agents.localStorage?.putJson("bar", bar);
     await this.context.agents.localStorage?.putJson("baz", { baz: 777 });
 
-    await this.context.agents.localStorage?.putString("deleteMe", "shouldDelete");
+    await this.context.agents.localStorage?.putString(
+      "deleteMe",
+      "shouldDelete"
+    );
     await this.context.agents.localStorage?.delete("deleteMe");
 
     const expected = Uint8Array.from([0x94, 0x87, 0x94, 0x87]);
     await this.context.agents.localStorage?.putByteArray("is87", expected);
 
-    const bytes = (await this.context.agents.localStorage?.get("is87")) as Uint8Array;
+    const bytes = (await this.context.agents.localStorage?.get(
+      "is87"
+    )) as Uint8Array;
     await this.context.agents.localStorage?.putJson("is87_check", {
       isUint8Array: bytes instanceof Uint8Array,
       isEqual:

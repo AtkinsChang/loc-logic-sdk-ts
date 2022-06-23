@@ -17,11 +17,24 @@ export class TestHttp extends GenericLogic {
   }
 
   async testHttpGet() {
-    let resp = await this.context.agents.http?.get("http://mock:8080", {}, Http.ContentType.Json)!;
+    let resp = await this.context.agents.http?.get(
+      "http://mock:8080",
+      {},
+      Http.ContentType.Json
+    )!;
 
-    await this.context.agents.sessionStorage.putJson("GET.status", resp.status as Number);
-    await this.context.agents.sessionStorage.putJson("GET.headers", resp.headers);
-    await this.context.agents.sessionStorage.putByteArray("GET.body", resp.body);
+    await this.context.agents.sessionStorage.putJson(
+      "GET.status",
+      resp.status as Number
+    );
+    await this.context.agents.sessionStorage.putJson(
+      "GET.headers",
+      resp.headers
+    );
+    await this.context.agents.sessionStorage.putByteArray(
+      "GET.body",
+      resp.body
+    );
   }
 
   async testHttpPost() {
@@ -34,9 +47,18 @@ export class TestHttp extends GenericLogic {
       new Uint8Array([123, 34, 97, 34, 58, 51, 51, 125])
     )!;
 
-    await this.context.agents.sessionStorage.putJson("POST.status", resp.status as Number);
-    await this.context.agents.sessionStorage.putJson("POST.headers", resp.headers);
-    await this.context.agents.sessionStorage.putByteArray("POST.body", resp.body);
+    await this.context.agents.sessionStorage.putJson(
+      "POST.status",
+      resp.status as Number
+    );
+    await this.context.agents.sessionStorage.putJson(
+      "POST.headers",
+      resp.headers
+    );
+    await this.context.agents.sessionStorage.putByteArray(
+      "POST.body",
+      resp.body
+    );
   }
 
   async testHttpPut() {
@@ -47,15 +69,25 @@ export class TestHttp extends GenericLogic {
       },
       Http.ContentType.Json,
       new Uint8Array([
-        123, 34, 100, 97, 116, 97, 49, 34, 58, 34, 112, 117, 116, 32, 109, 111, 99, 107, 32, 100,
-        97, 116, 97, 49, 34, 44, 34, 100, 97, 116, 97, 50, 34, 58, 34, 112, 117, 116, 32, 109, 111,
-        99, 107, 32, 100, 97, 116, 97, 50, 34, 125,
+        123, 34, 100, 97, 116, 97, 49, 34, 58, 34, 112, 117, 116, 32, 109, 111,
+        99, 107, 32, 100, 97, 116, 97, 49, 34, 44, 34, 100, 97, 116, 97, 50, 34,
+        58, 34, 112, 117, 116, 32, 109, 111, 99, 107, 32, 100, 97, 116, 97, 50,
+        34, 125,
       ])
     )!;
 
-    await this.context.agents.sessionStorage.putJson("PUT.status", resp.status as Number);
-    await this.context.agents.sessionStorage.putJson("PUT.headers", resp.headers);
-    await this.context.agents.sessionStorage.putByteArray("PUT.body", resp.body);
+    await this.context.agents.sessionStorage.putJson(
+      "PUT.status",
+      resp.status as Number
+    );
+    await this.context.agents.sessionStorage.putJson(
+      "PUT.headers",
+      resp.headers
+    );
+    await this.context.agents.sessionStorage.putByteArray(
+      "PUT.body",
+      resp.body
+    );
   }
 
   async testHttpPatch() {
@@ -66,14 +98,23 @@ export class TestHttp extends GenericLogic {
       },
       Http.ContentType.Json,
       new Uint8Array([
-        123, 34, 100, 97, 116, 97, 49, 34, 58, 34, 112, 117, 116, 32, 109, 111, 99, 107, 32, 100,
-        97, 116, 97, 49, 34, 125,
+        123, 34, 100, 97, 116, 97, 49, 34, 58, 34, 112, 117, 116, 32, 109, 111,
+        99, 107, 32, 100, 97, 116, 97, 49, 34, 125,
       ])
     )!;
 
-    await this.context.agents.sessionStorage.putJson("PATCH.status", resp.status as Number);
-    await this.context.agents.sessionStorage.putJson("PATCH.headers", resp.headers);
-    await this.context.agents.sessionStorage.putByteArray("PATCH.body", resp.body);
+    await this.context.agents.sessionStorage.putJson(
+      "PATCH.status",
+      resp.status as Number
+    );
+    await this.context.agents.sessionStorage.putJson(
+      "PATCH.headers",
+      resp.headers
+    );
+    await this.context.agents.sessionStorage.putByteArray(
+      "PATCH.body",
+      resp.body
+    );
   }
 
   async testHttpDelete() {
@@ -86,8 +127,17 @@ export class TestHttp extends GenericLogic {
       new Uint8Array()
     )!;
 
-    await this.context.agents.sessionStorage.putJson("DELETE.status", resp.status as Number);
-    await this.context.agents.sessionStorage.putJson("DELETE.headers", resp.headers);
-    await this.context.agents.sessionStorage.putByteArray("DELETE.body", resp.body);
+    await this.context.agents.sessionStorage.putJson(
+      "DELETE.status",
+      resp.status as Number
+    );
+    await this.context.agents.sessionStorage.putJson(
+      "DELETE.headers",
+      resp.headers
+    );
+    await this.context.agents.sessionStorage.putByteArray(
+      "DELETE.body",
+      resp.body
+    );
   }
 }

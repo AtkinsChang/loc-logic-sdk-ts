@@ -3,7 +3,9 @@ import { AggregatorLogic, Logic, RailwayError } from "@saffron/logic";
 @Logic()
 export class Aggregator extends AggregatorLogic {
   async run() {
-    let value = (await this.context.agents.sessionStorage.get("kuma")) as Number;
+    let value = (await this.context.agents.sessionStorage.get(
+      "kuma"
+    )) as Number;
     await this.context.agents.result.finalize({ kuma: value });
   }
 

@@ -1,4 +1,9 @@
-export { Database, DatabaseAgent, DatabaseClient, DatabaseClientId } from "./database";
+export {
+  Database,
+  DatabaseAgent,
+  DatabaseClient,
+  DatabaseClientId,
+} from "./database";
 export { EventAgent, Event } from "./event";
 export { FileStorageAgent } from "./file_storage";
 export { HttpAgent, Http } from "./http";

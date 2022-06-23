@@ -44,11 +44,14 @@ export class DatabaseClient {
       rows: any[];
     }
 
-    let results: QueryResults = await Deno.core.opAsync("op_database_agent_query", {
-      uid: this.uid,
-      rawSql,
-      params,
-    });
+    let results: QueryResults = await Deno.core.opAsync(
+      "op_database_agent_query",
+      {
+        uid: this.uid,
+        rawSql,
+        params,
+      }
+    );
 
     results.rows = results.rows.reduce((newRows: any[], row: any) => {
       type Row = { [key: string]: any };
@@ -72,7 +75,11 @@ export class DatabaseClient {
   }
 
   async execute(rawSql: string, params: any[]) {
-    return Deno.core.opAsync("op_database_agent_execute", { uid: this.uid, rawSql, params });
+    return Deno.core.opAsync("op_database_agent_execute", {
+      uid: this.uid,
+      rawSql,
+      params,
+    });
   }
 
   async beginTransaction(): Promise<DatabaseClient> {
@@ -93,7 +100,12 @@ export namespace Database {
   export interface Config {
     databaseDriver: Driver;
     connectionString?: string | null;
-    connection?: string | MySqlParameters | OracleParameters | PostgresParameters | null;
+    connection?:
+      | string
+      | MySqlParameters
+      | OracleParameters
+      | PostgresParameters
+      | null;
   }
 
   export enum Driver {

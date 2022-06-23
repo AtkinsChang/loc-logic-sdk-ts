@@ -23,13 +23,21 @@ export class TestWeb extends GenericLogic {
     );
 
     let uint8array = new TextEncoder().encode("Hi 你好 🐳");
-    await this.context.agents.sessionStorage.putByteArray("uint8array", uint8array);
+    await this.context.agents.sessionStorage.putByteArray(
+      "uint8array",
+      uint8array
+    );
 
     let string = new TextDecoder().decode(uint8array);
     await this.context.agents.sessionStorage.putString("string", string);
 
-    let blob = new Blob([JSON.stringify({ hello: "world" })], { type: "application/json" });
-    await this.context.agents.sessionStorage.putJson("blob_size", blob.size as Number);
+    let blob = new Blob([JSON.stringify({ hello: "world" })], {
+      type: "application/json",
+    });
+    await this.context.agents.sessionStorage.putJson(
+      "blob_size",
+      blob.size as Number
+    );
     await this.context.agents.sessionStorage.putString("blob_type", blob.type);
 
     let reader = new FileReader();
@@ -38,7 +46,10 @@ export class TestWeb extends GenericLogic {
       let decoder = new TextDecoder();
       let result = decoder.decode(reader.result);
 
-      await this.context.agents.sessionStorage.putString("fileReader_result", result);
+      await this.context.agents.sessionStorage.putString(
+        "fileReader_result",
+        result
+      );
     });
     reader.readAsArrayBuffer(blob);
   }

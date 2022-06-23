@@ -81,7 +81,9 @@ interface FileReader extends EventTarget {
   onerror: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null;
   onload: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null;
   onloadend: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null;
-  onloadstart: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null;
+  onloadstart:
+    | ((this: FileReader, ev: ProgressEvent<FileReader>) => any)
+    | null;
   onprogress: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null;
   readonly readyState: number;
   readonly result: string | ArrayBuffer | null;
@@ -149,7 +151,11 @@ interface FilePropertyBag extends BlobPropertyBag {
 /** Provides information about files and allows JavaScript in a web page to
  * access their content. */
 declare class File extends Blob {
-  constructor(fileBits: BlobPart[], fileName: string, options?: FilePropertyBag);
+  constructor(
+    fileBits: BlobPart[],
+    fileName: string,
+    options?: FilePropertyBag
+  );
 
   readonly lastModified: number;
   readonly name: string;

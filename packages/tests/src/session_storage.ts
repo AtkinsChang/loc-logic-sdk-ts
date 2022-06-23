@@ -15,7 +15,9 @@ export class TestSessionStorage extends GenericLogic {
     const expected = Uint8Array.from([0x94, 0x87, 0x94, 0x87]);
     await this.context.agents.sessionStorage.putByteArray("is87", expected);
 
-    const bytes = (await this.context.agents.sessionStorage.get("is87")) as Uint8Array;
+    const bytes = (await this.context.agents.sessionStorage.get(
+      "is87"
+    )) as Uint8Array;
     await this.context.agents.sessionStorage.putJson("is87_check", {
       isUint8Array: bytes instanceof Uint8Array,
       isEqual:
@@ -23,7 +25,10 @@ export class TestSessionStorage extends GenericLogic {
         expected.every((element, index) => element === bytes[index]),
     });
 
-    await this.context.agents.sessionStorage.putString("deleteMe", "shouldDelete");
+    await this.context.agents.sessionStorage.putString(
+      "deleteMe",
+      "shouldDelete"
+    );
     await this.context.agents.sessionStorage.delete("deleteMe");
   }
 

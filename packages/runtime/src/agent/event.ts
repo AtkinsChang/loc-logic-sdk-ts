@@ -1,4 +1,9 @@
-import { PatternRequest, PatternResponse, SearchRequest, SearchResponse } from "../types/event";
+import {
+  PatternRequest,
+  PatternResponse,
+  SearchRequest,
+  SearchResponse,
+} from "../types/event";
 
 export class EventAgent {
   async emit(events: Event.Event[]): Promise<void> {

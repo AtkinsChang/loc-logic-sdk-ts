@@ -12,7 +12,8 @@ export class FileStorageAgent {
     data: Uint8Array | string,
     options?: FileStorage.PutOptions
   ): Promise<number> {
-    const byteArray: Uint8Array = typeof data === "string" ? Deno.core.encode(data) : data;
+    const byteArray: Uint8Array =
+      typeof data === "string" ? Deno.core.encode(data) : data;
 
     return Deno.core.opAsync(
       "op_file_storage_agent_simple_put",
@@ -25,11 +26,17 @@ export class FileStorageAgent {
   }
 
   async delete(url: URL | string): Promise<void> {
-    return Deno.core.opAsync("op_file_storage_agent_delete", url instanceof URL ? url.href : url);
+    return Deno.core.opAsync(
+      "op_file_storage_agent_delete",
+      url instanceof URL ? url.href : url
+    );
   }
 
   async list(url: URL | string): Promise<Array<FileStorage.FileType>> {
-    return Deno.core.opAsync("op_file_storage_agent_list", url instanceof URL ? url.href : url);
+    return Deno.core.opAsync(
+      "op_file_storage_agent_list",
+      url instanceof URL ? url.href : url
+    );
   }
 
   async createDirAll(url: URL | string): Promise<void> {

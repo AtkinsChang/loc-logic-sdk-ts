@@ -6,7 +6,9 @@
 /// <reference lib="esnext" />
 
 declare class URLSearchParams {
-  constructor(init?: string[][] | Record<string, string> | string | URLSearchParams);
+  constructor(
+    init?: string[][] | Record<string, string> | string | URLSearchParams
+  );
   static toString(): string;
 
   /** Appends a specified key/value pair as a new search parameter.
@@ -88,7 +90,10 @@ declare class URLSearchParams {
    * ```
    *
    */
-  forEach(callbackfn: (value: string, key: string, parent: this) => void, thisArg?: any): void;
+  forEach(
+    callbackfn: (value: string, key: string, parent: this) => void,
+    thisArg?: any
+  ): void;
 
   /** Returns an iterator allowing to go through all keys contained
    * in this object.

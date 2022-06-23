@@ -8,10 +8,13 @@ export class TestMessageQueuePayload extends GenericLogic {
 
       this.context.agents.logging.info("test MessageQueuePayload");
       this.context.agents.logging.info(typeof this.context.payload);
-      this.context.agents.logging.info(`${"messageQueue" in this.context.payload}`);
+      this.context.agents.logging.info(
+        `${"messageQueue" in this.context.payload}`
+      );
 
       if ("messageQueue" in this.context.payload) {
-        const { clientIdentityContext, subscriber, data } = this.context.payload.messageQueue;
+        const { clientIdentityContext, subscriber, data } =
+          this.context.payload.messageQueue;
 
         this.context.agents.logging.info(data.constructor.name);
 

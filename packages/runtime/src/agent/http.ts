@@ -1,5 +1,8 @@
 export class HttpAgent {
-  async send(request: Http.Request, config: Http.Config | null): Promise<Http.Response> {
+  async send(
+    request: Http.Request,
+    config: Http.Config | null
+  ): Promise<Http.Response> {
     const { method, url, headers, contentType, body } = request;
     const req = { method, url, headers, contentType, config };
 
@@ -13,7 +16,10 @@ export class HttpAgent {
     body: Uint8Array | null = null,
     config: Http.Config | null = null
   ): Promise<Http.Response> {
-    return this.send(new Http.Request(Http.Method.GET, url, headers, contentType, body), config);
+    return this.send(
+      new Http.Request(Http.Method.GET, url, headers, contentType, body),
+      config
+    );
   }
 
   async post(
@@ -23,7 +29,10 @@ export class HttpAgent {
     body: Uint8Array | null,
     config: Http.Config | null = null
   ): Promise<Http.Response> {
-    return this.send(new Http.Request(Http.Method.POST, url, headers, contentType, body), config);
+    return this.send(
+      new Http.Request(Http.Method.POST, url, headers, contentType, body),
+      config
+    );
   }
 
   async patch(
@@ -33,7 +42,10 @@ export class HttpAgent {
     body: Uint8Array | null,
     config: Http.Config | null = null
   ): Promise<Http.Response> {
-    return this.send(new Http.Request(Http.Method.PATCH, url, headers, contentType, body), config);
+    return this.send(
+      new Http.Request(Http.Method.PATCH, url, headers, contentType, body),
+      config
+    );
   }
 
   async put(
@@ -43,7 +55,10 @@ export class HttpAgent {
     body: Uint8Array | null,
     config: Http.Config | null = null
   ): Promise<Http.Response> {
-    return this.send(new Http.Request(Http.Method.PUT, url, headers, contentType, body), config);
+    return this.send(
+      new Http.Request(Http.Method.PUT, url, headers, contentType, body),
+      config
+    );
   }
 
   async delete(
@@ -53,7 +68,10 @@ export class HttpAgent {
     body: Uint8Array | null,
     config: Http.Config | null = null
   ): Promise<Http.Response> {
-    return this.send(new Http.Request(Http.Method.DELETE, url, headers, contentType, body), config);
+    return this.send(
+      new Http.Request(Http.Method.DELETE, url, headers, contentType, body),
+      config
+    );
   }
 }
 

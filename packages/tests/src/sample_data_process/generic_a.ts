@@ -3,7 +3,10 @@ import { GenericLogic, Logic, RailwayError } from "@saffron/logic";
 @Logic()
 export class GenericA extends GenericLogic {
   async run() {
-    await this.context.agents.sessionStorage.putJson("fstnetwork", 6000 as Number);
+    await this.context.agents.sessionStorage.putJson(
+      "fstnetwork",
+      6000 as Number
+    );
     await this.context.agents.sessionStorage.putJson("magic", 9487 as Number);
 
     await this.context.agents.eventStore.emit([

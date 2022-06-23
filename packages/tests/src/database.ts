@@ -23,7 +23,10 @@ export class TestDatabase extends GenericLogic {
         databaseDriver: Database.Driver.Oracle,
         connection,
       });
-      let resp = await db?.query("SELECT * FROM saffron_process.tables WHERE 1=1;", []);
+      let resp = await db?.query(
+        "SELECT * FROM saffron_process.tables WHERE 1=1;",
+        []
+      );
       if (resp !== undefined) {
         await this.context.agents.sessionStorage.putJson(
           "database_test_query_resp_columns",
@@ -54,7 +57,10 @@ export class TestDatabase extends GenericLogic {
         "INSERT INTO saffron_process.tables(id, name) VALUES ($1, $2);",
         [4, "usada"]
       );
-      await this.context.agents.sessionStorage.putJson("database_test_execute_resp", resp);
+      await this.context.agents.sessionStorage.putJson(
+        "database_test_execute_resp",
+        resp
+      );
       await db?.commitTransaction();
       await db?.disconnect();
     } catch (error) {

@@ -1,5 +1,9 @@
 export class SmtpAgent {
-  async connect(host: string, username?: string, password?: string): Promise<SmtpAgentHub> {
+  async connect(
+    host: string,
+    username?: string,
+    password?: string
+  ): Promise<SmtpAgentHub> {
     let credential = null;
     if (username !== null && password != null) {
       credential = { username, password };

@@ -1,0 +1,9 @@
+**/node_modules/
+**/target/
+bin/
+coverage/
+dist/
+.pnp.cjs
+.yarn/*
+
+.direnv

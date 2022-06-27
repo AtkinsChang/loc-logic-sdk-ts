@@ -1,5 +1,8 @@
 .DS_Store
 node_modules/
+dist/
+bin/
+build/
 
 .yarn/*
 !.yarn/patches
@@ -7,3 +10,5 @@ node_modules/
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+.direnv

@@ -7,7 +7,7 @@ build/
 
 node_modules/
 
-*.tsbuildinfo
+**/*.tsbuildinfo
 yarn-error.log*
 
 **/.yarn/*

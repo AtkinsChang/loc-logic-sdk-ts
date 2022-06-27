@@ -7,6 +7,6 @@
     "outDir": "target"
   },
   "include": ["src/**/*"],
-  "exclude": ["target"],
-  "references": [{ "path": "../runtime" }]
+  "exclude": ["target"]
+  // "references": [{ "path": "../runtime" }]
 }

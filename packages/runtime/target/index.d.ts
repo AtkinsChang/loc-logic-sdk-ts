@@ -636,4 +636,32 @@ declare let runtime: Runtime<AggregatorContext | GenericContext>;
 declare function genericLogic(): void;
 declare function aggregatorLogic(): void;
 
-export { AggregatorContext, DataSourceIdentityContext, Database, DatabaseAgent, EventAgent, EventPayload, FileStorageAgent, GenericContext, Http, HttpAgent, HttpPayload, IdentityContext, LocalStorageAgent, LoggingAgent, MessageQueuePayload, Payload, Railway, RailwayError, ResultAgent, SessionStorageAgent, Smtp, SmtpAgent, SmtpAgentHub, Task, aggregatorLogic, genericLogic, runtime };
+export {
+  AggregatorContext,
+  DataSourceIdentityContext,
+  Database,
+  DatabaseAgent,
+  EventAgent,
+  EventPayload,
+  FileStorageAgent,
+  GenericContext,
+  Http,
+  HttpAgent,
+  HttpPayload,
+  IdentityContext,
+  LocalStorageAgent,
+  LoggingAgent,
+  MessageQueuePayload,
+  Payload,
+  Railway,
+  RailwayError,
+  ResultAgent,
+  SessionStorageAgent,
+  Smtp,
+  SmtpAgent,
+  SmtpAgentHub,
+  Task,
+  aggregatorLogic,
+  genericLogic,
+  runtime,
+};

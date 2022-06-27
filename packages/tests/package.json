@@ -1,7 +1,7 @@
 {
   "name": "@saffron/tests",
-  "version": "1.0.0",
-  "repository": "https://github.com/fstnetwork/saffron",
+  "version": "0.0.0",
+  "repository": "https://github.com/fstnetwork/loc-sdk-ts",
   "author": "FST Network <dev@fstk.io>",
   "private": true,
   "scripts": {

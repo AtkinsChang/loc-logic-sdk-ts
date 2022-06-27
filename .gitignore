@@ -1,14 +1,21 @@
+.idea
 .DS_Store
-node_modules/
+*.swp
 dist/
 bin/
 build/
 
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+node_modules/
+
+*.tsbuildinfo
+yarn-error.log*
+
+**/.yarn/*
+**/.yarn/*
+!**/.yarn/patches
+!**/.yarn/releases
+!**/.yarn/plugins
+!**/.yarn/sdks
+!**/.yarn/versions
 
 .direnv

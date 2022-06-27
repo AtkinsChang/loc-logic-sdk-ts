@@ -1,7 +1,7 @@
 {
   "name": "@fstnetwork/root",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "repository": "https://github.com/fstnetwork/loc-sdk-ts",
   "author": "FST Network <dev@fstk.io>",
   "workspaces": [

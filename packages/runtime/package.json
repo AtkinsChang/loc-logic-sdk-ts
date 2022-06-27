@@ -1,9 +1,9 @@
 {
   "name": "@saffron/runtime",
-  "version": "1.0.0",
-  "repository": "https://github.com/fstnetwork/saffron",
-  "author": "FST Network <dev@fstk.io>",
+  "version": "0.0.0",
   "private": true,
+  "repository": "https://github.com/fstnetwork/loc-sdk-ts",
+  "author": "FST Network <dev@fstk.io>",
   "types": "target/index.d.ts",
   "scripts": {
     "build": "ts-node build.ts && rollup -c && rimraf target/dts",

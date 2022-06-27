@@ -14,7 +14,7 @@ export default defineConfig([
     plugins: [typescript({ tsconfig: "./tsconfig.json" })],
   },
   {
-    input: "target/dts/index.d.ts",
+    input: "target/temp/index.d.ts",
     output: {
       file: "target/index.d.ts",
       format: "es",

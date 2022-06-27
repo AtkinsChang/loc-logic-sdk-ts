@@ -3,7 +3,7 @@
   "compilerOptions": {
     "emitDeclarationOnly": true,
     "rootDir": "src",
-    "outDir": "dts"
+    "outDir": "temp"
   },
   "include": ["src/**/*"],
   "exclude": ["target"],

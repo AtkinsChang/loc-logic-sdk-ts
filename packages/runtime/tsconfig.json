@@ -1,10 +1,10 @@
 {
   "extends": "../../tsconfig.base",
   "compilerOptions": {
+    "composite": true,
     "rootDir": "src",
-
-    "emitDeclarationOnly": true,
-    "outDir": "dts"
+    "outDir": "dts",
+    "emitDeclarationOnly": true
   },
   "include": ["src/**/*"],
   "exclude": ["target"],

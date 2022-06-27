@@ -1,12 +1,7 @@
 {
   "compilerOptions": {
-    "composite": true
-  },
-  "files": [],
-  "include": [],
-  "references": [
-    { "path": "packages/runtime" },
-    { "path": "packages/logic" },
-    { "path": "packages/loc" }
-  ]
+    "composite": true,
+    "declaration": true,
+    "emitDeclarationOnly": true
+  }
 }

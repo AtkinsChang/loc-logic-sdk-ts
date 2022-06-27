@@ -1,5 +1,4 @@
-**/node_modules
-**/target
+node_modules/
 bin/
 coverage/
 dist/

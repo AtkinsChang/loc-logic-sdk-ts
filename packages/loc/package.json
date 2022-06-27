@@ -1,0 +1,19 @@
+{
+  "name": "@fstnetwork/loc",
+  "version": "0.5.1",
+  "repository": "https://github.com/fstnetwork/loc-sdk-ts",
+  "author": "FST Network <dev@fstk.io>",
+  "private": true,
+  "main": "target/index.js",
+  "types": "src/types.d.ts",
+  "scripts": {
+    "build": "tsc --build .",
+    "clean": "rimraf target"
+  },
+  "devDependencies": {
+    "@saffron/logic": "workspace:*",
+    "@saffron/runtime": "workspace:*",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.5"
+  }
+}

@@ -4,5 +4,9 @@
   },
   "files": [],
   "include": [],
-  "references": [{ "path": "packages/runtime" }]
+  "references": [
+    { "path": "packages/runtime" },
+    { "path": "packages/logic" },
+    { "path": "packages/loc" }
+  ]
 }

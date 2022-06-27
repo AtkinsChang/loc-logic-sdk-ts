@@ -19,8 +19,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],
     "dependencyTreeRoots": [
       {
-        "name": "@saffron/root",
+        "name": "@fstnetwork/root",
         "reference": "workspace:."
+      },
+      {
+        "name": "@fstnetwork/loc",
+        "reference": "workspace:packages/loc"
       },
       {
         "name": "@saffron/logic",
@@ -38,8 +42,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
+      ["@fstnetwork/loc", ["workspace:packages/loc"]],
+      ["@fstnetwork/root", ["workspace:."]],
       ["@saffron/logic", ["workspace:packages/logic"]],
-      ["@saffron/root", ["workspace:."]],
       ["@saffron/runtime", ["workspace:packages/runtime"]],
       ["@saffron/tests", ["workspace:packages/tests"]]
     ],
@@ -116,6 +121,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@cspotcode/source-map-consumer", "npm:0.8.0"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["@fstnetwork/loc", [
+        ["workspace:packages/loc", {
+          "packageLocation": "./packages/loc/",
+          "packageDependencies": [
+            ["@fstnetwork/loc", "workspace:packages/loc"],
+            ["@saffron/logic", "workspace:packages/logic"],
+            ["@saffron/runtime", "workspace:packages/runtime"],
+            ["rimraf", "npm:3.0.2"],
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@fstnetwork/root", [
+        ["workspace:.", {
+          "packageLocation": "./",
+          "packageDependencies": [
+            ["@fstnetwork/root", "workspace:."],
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["@jsdevtools/ono", [
@@ -230,16 +258,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@saffron/logic", "workspace:packages/logic"],
             ["@saffron/runtime", "workspace:packages/runtime"],
             ["rimraf", "npm:3.0.2"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
-          ],
-          "linkType": "SOFT",
-        }]
-      ]],
-      ["@saffron/root", [
-        ["workspace:.", {
-          "packageLocation": "./",
-          "packageDependencies": [
-            ["@saffron/root", "workspace:."],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
           "linkType": "SOFT",

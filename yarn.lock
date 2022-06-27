@@ -60,6 +60,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fstnetwork/loc@workspace:packages/loc":
+  version: 0.0.0-use.local
+  resolution: "@fstnetwork/loc@workspace:packages/loc"
+  dependencies:
+    "@saffron/logic": "workspace:*"
+    "@saffron/runtime": "workspace:*"
+    rimraf: ^3.0.2
+    typescript: ^4.3.5
+  languageName: unknown
+  linkType: soft
+
+"@fstnetwork/root@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@fstnetwork/root@workspace:."
+  dependencies:
+    typescript: ^4.3.5
+  languageName: unknown
+  linkType: soft
+
 "@jsdevtools/ono@npm:^7.1.3":
   version: 7.1.3
   resolution: "@jsdevtools/ono@npm:7.1.3"
@@ -126,14 +145,6 @@ __metadata:
   dependencies:
     "@saffron/runtime": "workspace:*"
     rimraf: ^3.0.2
-    typescript: ^4.3.5
-  languageName: unknown
-  linkType: soft
-
-"@saffron/root@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@saffron/root@workspace:."
-  dependencies:
     typescript: ^4.3.5
   languageName: unknown
   linkType: soft

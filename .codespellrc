@@ -1,0 +1,4 @@
+[codespell]
+skip = .git,target,.pnp.cjs,.yarn
+check-filenames =
+check-hidden =

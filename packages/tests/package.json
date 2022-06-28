@@ -8,10 +8,12 @@
     "build": "rollup -c",
     "clean": "rimraf target"
   },
+  "dependencies": {
+    "@saffron/logic": "workspace:*"
+  },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-typescript": "^8.2.5",
-    "@saffron/logic": "workspace:*",
     "rimraf": "^3.0.2",
     "rollup": "^2.56.3",
     "tslib": "^2.3.1",
